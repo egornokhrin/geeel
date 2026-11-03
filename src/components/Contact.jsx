@@ -1,42 +1,40 @@
-// ФОРМА ЗАЯВКИ / ЛИД-МАГНИТ
-// Призыв к действию: предлагаем бесплатный первый шаг (замер, пробник, аудит).
 export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Спасибо! Мы скоро свяжемся с вами.');
+    alert('Спасибо! Я скоро свяжусь с тобой.');
   };
 
   return (
     <section id="contact" className="contact-section">
       <div className="container contact-container">
         <div className="contact-info">
-          <h2>Закажите бесплатную консультацию</h2>
+          <h2>Давай знакомиться</h2>
           <p>
-            Наш специалист свяжется с вами, оценит фронт задач и при необходимости
-            подготовит пробные варианты прямо на месте.
+            Если тебе интересно сотрудничество, учёба, спорт или просто
+            хочешь поболтать о коде — пиши.
           </p>
           <ul className="feature-list">
-            <li>• Составление сметы за 1 час</li>
-            <li>• Подбор оптимального решения под бюджет</li>
-            <li>• Честная оценка сроков</li>
+            <li>• Барнаул, Россия</li>
+            <li>• Telegram: @your_nick</li>
+            <li>• Email: egor@example.com</li>
           </ul>
         </div>
 
         <div className="contact-form-card">
-          <h3>Оставить заявку</h3>
-          <p className="form-subtitle">Перезвоним в течение 15 минут</p>
+          <h3>Оставить сообщение</h3>
+          <p className="form-subtitle">Отвечу в ближайшее время</p>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" placeholder="Ваше Имя / Ник" required />
+              <input type="text" placeholder="Как тебя зовут?" required />
             </div>
             <div className="form-group">
-              <input type="tel" placeholder="+7 (___) ___-__-__" required />
+              <input type="text" placeholder="Telegram или email" required />
             </div>
             <div className="form-group">
-              <textarea placeholder="Опишите в двух словах вашу задачу..." rows="3"></textarea>
+              <textarea placeholder="Пара слов о задаче..." rows="3"></textarea>
             </div>
-            <button type="submit" className="btn btn-primary btn-block">
-              Получить консультацию
+            <button type="submit" className="btn btn-secondary btn-block">
+              Отправить
             </button>
           </form>
         </div>

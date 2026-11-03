@@ -1,45 +1,40 @@
-// НАПРАВЛЕНИЯ / КАРТОЧКИ УСЛУГ (SERVICES)
-// Показываем, с какими категориями задач вы работаете.
 export default function Services() {
   return (
-    <section id="services" className="services-section">
+    <section id="skills" className="services-section">
       <div className="container">
         <div className="section-header">
-          <h2>Направления работы</h2>
-          <p>Выберите подходящий формат под вашу задачу</p>
+          <h2>Чем я занимаюсь</h2>
+          <p>Учёба, код и спорт — три составляющие моей жизни</p>
         </div>
 
         <div className="services-grid">
-          {/* Карточка 1 */}
           <div className="service-card">
-            <div className="card-image-placeholder">[ Картинка 1 ]</div>
+            <div className="card-image-placeholder">Frontend</div>
             <div className="card-body">
-              <span className="card-tag">Базовый</span>
-              <h3>Для частных клиентов</h3>
-              <p>Быстрое решение повседневных задач с гарантией и вниманием к мелочам.</p>
-              <div className="card-price">от 850 ₽ / ед.</div>
+              <span className="card-tag">Основное</span>
+              <h3>Веб-разработка</h3>
+              <p>Верстаю лендинги и пишу интерфейсы на React. Разбираюсь в HTML, CSS, JavaScript.</p>
+              <div className="card-price">React • JS • CSS</div>
             </div>
           </div>
 
-          {/* Карточка 2 */}
           <div className="service-card">
-            <div className="card-image-placeholder">[ Картинка 2 ]</div>
+            <div className="card-image-placeholder">Учёба</div>
             <div className="card-body">
-              <span className="card-tag">Бизнес</span>
-              <h3>Для коммерческих предложений</h3>
-              <p>Большие объемы, официальные закрывающие документы и гибкий график.</p>
-              <div className="card-price">от 600 ₽ / ед.</div>
+              <span className="card-tag">Образование</span>
+              <h3>Разработка ПО</h3>
+              <p>Учусь на РПО: алгоритмы, базы данных, архитектура приложений и командная работа.</p>
+              <div className="card-price">Колледж • Барнаул</div>
             </div>
           </div>
 
-          {/* Карточка 3 */}
           <div className="service-card">
-            <div className="card-image-placeholder">[ Картинка 3 ]</div>
+            <div className="card-image-placeholder">Спорт</div>
             <div className="card-body">
-              <span className="card-tag">Эксклюзив</span>
-              <h3>Сложные и неизведанные формы</h3>
-              <p>Работа с нестандартными формами, специфическими задачами и целями.</p>
-              <div className="card-price">от 1 200 ₽ / ед.</div>
+              <span className="card-tag">Дисциплина</span>
+              <h3>Тренажёрный зал</h3>
+              <p>Регулярные тренировки помогают держать форму, концентрацию и хорошее настроение.</p>
+              <div class="card-price">Сила • Выносливость</div>
             </div>
           </div>
         </div>

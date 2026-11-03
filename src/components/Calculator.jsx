@@ -1,75 +1,72 @@
 import { useState } from 'react';
 
-// ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР
-// Обратите внимание: вся логика формы хранится прямо здесь в useState
-// и не засоряет остальные части проекта!
 export default function Calculator() {
   const [formData, setFormData] = useState({
-    category: 'Частный дом',
-    volume: '100',
-    address: ''
+    topic: 'Сотрудничество',
+    contact: '',
+    message: ''
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Расчет запрошен!\nОбъект: ${formData.category}\nОбъем: ${formData.volume}`);
+    alert(`Спасибо!\nТема: ${formData.topic}\nКонтакт: ${formData.contact}`);
   };
 
   return (
-    <section id="calculator" className="calculator-section">
+    <section id="feedback" className="calculator-section">
       <div className="container calc-container">
-        {/* Левая колонка: объясняем выгоду */}
         <div className="calc-info">
-          <h2>Рассчитайте стоимость за пару кликов</h2>
+          <h2>Хочешь связаться или предложить проект?</h2>
           <p>
-            Заполните предварительные параметры, чтобы система помогла сориентироваться
-            по бюджету и срокам выполнения.
+            Заполни короткую форму — я отвечу, как только освобожусь после учёбы
+            или тренировки.
           </p>
           <ul className="feature-list">
-            <li>✔ <b>Быстро:</b> расчет без звонков и ожидания</li>
-            <li>✔ <b>Удобно:</b> все параметры перед глазами</li>
-            <li>✔ <b>Понятно:</b> никаких скрытых наценок</li>
+            <li>✔ <b>Быстро:</b> отвечаю в течение дня</li>
+            <li>✔ <b>Просто:</b> без лишних формальностей</li>
+            <li>✔ <b>По делу:</b> обсуждаем только реальные задачи</li>
           </ul>
         </div>
 
-        {/* Правая колонка: сама интерактивная форма */}
         <div className="calc-card">
-          <h3>Параметры расчета</h3>
-          <form onSubmit={handleSubmit} className="calc-form">
+          <h3>Короткая форма</h3>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>Тип объекта</label>
+              <label>Тема</label>
               <select
-                value={formData.category}
-                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                value={formData.topic}
+                onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
               >
-                <option value="Частный дом">Частный дом / Квартира</option>
-                <option value="Коммерция">Офис / Коммерция</option>
-                <option value="Другое">Нестандартный объект</option>
+                <option value="Сотрудничество">Сотрудничество</option>
+                <option value="Проект">Заказать проект</option>
+                <option value="Вопрос">Просто вопрос</option>
+                <option value="Другое">Другое</option>
               </select>
             </div>
 
             <div className="form-group">
-              <label>Примерный объем (м² или количество)</label>
+              <label>Контакт (Telegram, email или телефон)</label>
               <input
-                type="number"
-                value={formData.volume}
-                onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
+                type="text"
+                placeholder="@username или email"
+                value={formData.contact}
+                onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                 required
               />
             </div>
 
             <div className="form-group">
-              <label>Адрес или город</label>
-              <input
-                type="text"
-                placeholder="ул. Примерная, 10"
-                value={formData.address}
-                onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              <label>Сообщение</label>
+              <textarea
+                rows="3"
+                placeholder="Пара слов о задаче..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">
-              Получить расчет
+            <button type="submit" className="btn btn-secondary btn-block">
+              Отправить
             </button>
           </form>
         </div>

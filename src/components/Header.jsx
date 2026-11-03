@@ -1,22 +1,18 @@
-// ШАПКА САЙТА (HEADER)
-// Сюда выносим логотип, навигационные ссылки и быструю кнопку.
 export default function Header() {
   return (
     <header className="header">
       <div className="container header-container">
-        {/* Замените на название вашей команды, проекта или вставьте тег <img> с логотипом */}
-        <div className="logo">[ Мой Проект / Лого ]</div>
+        <div className="logo">Егор Нохрин</div>
 
-        {/* Ссылки с якорным переходом (#id) плавно ведут к нужным блокам ниже */}
         <nav className="nav-menu">
-          <a href="#services">Услуги</a>
-          <a href="#calculator">Калькулятор</a>
-          <a href="#portfolio">Работы</a>
+          <a href="#about">Обо мне</a>
+          <a href="#skills">Навыки</a>
+          <a href="#projects">Проекты</a>
           <a href="#contact">Контакты</a>
         </nav>
 
-        <a href="#calculator" className="btn btn-secondary btn-sm">
-          Рассчитать
+        <a href="#contact" className="btn btn-secondary btn-sm">
+          Связаться
         </a>
       </div>
     </header>

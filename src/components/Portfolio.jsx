@@ -1,31 +1,28 @@
-// БЛОК РЕЗУЛЬТАТОВ (ПРИМЕРЫ / ДО И ПОСЛЕ)
-// Наглядное доказательство ценности вашей работы.
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="portfolio-section">
+    <section id="projects" className="portfolio-section">
       <div className="container">
         <div className="section-header">
-          <h2>Результат нашей работы</h2>
-          <p>Посмотрите, как преображается объект при правильном подходе</p>
+          <h2>Мои проекты</h2>
+          <p>Учебные и личные работы, которые я делал сам</p>
         </div>
 
-        {/* Макет сравнения "Было / Стало" */}
         <div className="comparison-mockup">
           <div className="comparison-half before">
             <span className="comparison-badge">ДО</span>
-            <p>[ Картинка "Как было до нас" ]</p>
+            <p>Идея на бумаге</p>
           </div>
           <div className="comparison-divider">⟷</div>
           <div className="comparison-half after">
             <span className="comparison-badge">ПОСЛЕ</span>
-            <p>[ Картинка "Идеальный результат" ]</p>
+            <p>Готовый сайт на React</p>
           </div>
         </div>
 
         <div className="center-action">
-          <button className="btn btn-secondary">
-            Посмотреть все примеры →
-          </button>
+          <a href="#contact" className="btn btn-secondary">
+            Обсудить проект →
+          </a>
         </div>
       </div>
     </section>

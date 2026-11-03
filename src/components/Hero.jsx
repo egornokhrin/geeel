@@ -1,28 +1,25 @@
-// ПЕРВЫЙ ЭКРАН (HERO)
-// Самое важное место: за 3 секунды человек должен понять, о чем ваш сайт.
 export default function Hero() {
   return (
     <section className="hero-section">
       <div className="container hero-content">
+        <span className="badge">Студент • Разработчик • Спортсмен</span>
 
-        {/* Главный оффер: Какую задачу вы решаете? */}
         <h1 className="hero-title">
-          Главный заголовок: Опишите суть вашей идеи одной-двумя фразами
+          Привет, я Егор Нохрин. Мне 19, и я делаю сайты и учусь на РПО
         </h1>
 
-        {/* 2-3 предложения с деталями */}
         <p className="hero-description">
-          Здесь напишите кратко: чем именно вы полезны клиенту, какие фишки
-          или технологии используете и почему стоит доверять именно вам.
+          Живу в Барнауле, учусь на специальности «Разработка программного обеспечения».
+          Хожу в зал, люблю чистый код и понятные интерфейсы. Здесь — мои навыки,
+          проекты и контакты.
         </p>
 
-        {/* Две основные кнопки действия */}
         <div className="hero-actions">
-          <a href="#portfolio" className="btn btn-primary">
-            Посмотреть работы
+          <a href="#projects" className="btn btn-secondary">
+            Мои проекты
           </a>
-          <a href="#calculator" className="btn btn-outline">
-            Узнать стоимость
+          <a href="#contact" className="btn btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>
+            Написать мне
           </a>
         </div>
       </div>
